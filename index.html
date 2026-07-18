@@ -12,18 +12,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink:        #05091A;
-      --surface:    #0D1330;
-      --surface2:   #131C3D;
-      --border:     #1E2A52;
-      --accent-v:   #7C3AED;
-      --accent-b:   #3B82F6;
-      --accent-c:   #06B6D4;
-      --accent-g:   #10B981;
-      --text-1:     #F1F5FD;
-      --text-2:     #8B9EC4;
-      --text-3:     #526086;
-      --grad: linear-gradient(135deg, var(--accent-v), var(--accent-b));
+      --ink:        #152028;
+      --surface:    #244855;
+      --surface2:   #1C3540;
+      --border:     #2D5A6B;
+      --accent-v:   #E64833;
+      --accent-b:   #874F41;
+      --accent-c:   #90AEAD;
+      --accent-g:   #90AEAD;
+      --text-1:     #FBE9D0;
+      --text-2:     #B8C5C4;
+      --text-3:     #6B8A89;
+      --grad: linear-gradient(135deg, #E64833, #874F41);
       --font-display: 'Syne', sans-serif;
       --font-body:    'DM Sans', sans-serif;
       --font-mono:    'JetBrains Mono', monospace;
@@ -44,9 +44,9 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1rem 2.5rem;
-      background: rgba(5,9,26,0.7);
+      background: rgba(21,32,40,0.85);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(30,42,82,0.6);
+      border-bottom: 1px solid rgba(45,90,107,0.5);
     }
     .nav-logo {
       font-family: var(--font-mono);
@@ -80,14 +80,14 @@
       content: '';
       position: absolute; top: -30%; right: -10%;
       width: 700px; height: 700px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(230,72,51,0.15) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute; bottom: -20%; left: -5%;
       width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(144,174,173,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-eyebrow {
@@ -154,6 +154,25 @@
       transition: opacity 0.2s, transform 0.2s;
     }
     .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+    .btn-download {
+      padding: 0.75rem 1.75rem;
+      background: transparent;
+      border: 1px solid var(--accent-v);
+      color: var(--accent-v);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-download:hover {
+      background: var(--accent-v);
+      color: var(--text-1);
+      transform: translateY(-2px);
+    }
     .btn-outline {
       padding: 0.75rem 1.75rem;
       border: 1px solid var(--border);
@@ -320,11 +339,11 @@
       border-radius: 3px;
       letter-spacing: 0.05em;
     }
-    .tag-v { background: rgba(124,58,237,0.15); color: #A78BFA; }
-    .tag-b { background: rgba(59,130,246,0.15); color: #60A5FA; }
-    .tag-c { background: rgba(6,182,212,0.15); color: #67E8F9; }
-    .tag-g { background: rgba(16,185,129,0.15); color: #6EE7B7; }
-    .tag-y { background: rgba(245,158,11,0.15); color: #FCD34D; }
+    .tag-v { background: rgba(230,72,51,0.15); color: #F0876F; }
+    .tag-b { background: rgba(135,79,65,0.15); color: #C08070; }
+    .tag-c { background: rgba(144,174,173,0.2); color: #90AEAD; }
+    .tag-g { background: rgba(144,174,173,0.15); color: #A8C4C3; }
+    .tag-y { background: rgba(251,233,208,0.1); color: #FBE9D0; }
 
     /* ── SKILLS ── */
     .skills-wrapper {
@@ -352,7 +371,7 @@
     .skill-group-name {
       font-family: var(--font-mono);
       font-size: 0.7rem;
-      color: var(--accent-v);
+      color: #E64833;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
@@ -428,10 +447,10 @@
       display: flex; gap: 1rem; align-items: flex-start;
       transition: border-color 0.2s;
     }
-    .cert-card:hover { border-color: var(--accent-b); }
+    .cert-card:hover { border-color: var(--accent-c); }
     .cert-icon {
       width: 36px; height: 36px; flex-shrink: 0;
-      background: rgba(59,130,246,0.15);
+      background: rgba(144,174,173,0.15);
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem;
@@ -542,8 +561,8 @@
     .grid-noise {
       position: fixed; inset: 0; z-index: -1;
       background-image:
-        linear-gradient(rgba(30,42,82,0.2) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(30,42,82,0.2) 1px, transparent 1px);
+        linear-gradient(rgba(45,90,107,0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,90,107,0.2) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
       mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, transparent 75%);
@@ -578,6 +597,7 @@
 
   <div class="hero-cta">
     <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="./Resume_Omkar.pdf" download="Omkar_Mishra_Resume.pdf" class="btn-download">Check out my CV</a>
     <a href="mailto:omkarmishra2004@gmail.com" class="btn-outline">Get in Touch</a>
   </div>
 
